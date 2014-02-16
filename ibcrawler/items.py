@@ -6,6 +6,13 @@
 from scrapy.item import Item, Field
 
 class IbcrawlerItem(Item):
-    # define the fields for your item here like:
-    # name = Field()
-    pass
+    """
+    IbcrawlerItem - separate table item
+
+    This class represents a single line
+    crawled from table
+    """
+    description = Field()
+    type = Field()
+    symbol = Field()
+    exchange = Field()
