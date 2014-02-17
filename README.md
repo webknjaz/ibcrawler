@@ -22,7 +22,7 @@ After that you may start crawler with
 ```sh
 (env) $ scrapy crawl "Interactive Brokers Spider"
 ```
-To produce CVS add `-o results.cvs -t cvs` arguments to above command.
+To produce CSV add `-o results.cvs -t cvs` arguments to above command.
 
 Notes
 ===========================
