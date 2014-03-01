@@ -40,7 +40,8 @@ class IBSpider(CrawlSpider):
         soup = BeautifulSoup(response.body)
         items_count = int(soup.find('table', class_='resultsTbl')
                           .findAll('b')[2].string)
-        tabs_count = items_count + (1 if items_count % 100 else 0)
+        tabs_count = items_count/100 + (1 if items_count % 100 else 0)
+        self.log('Items amount is {0}'.format(items_count))
         self.log('Tabs amount is {0}'.format(tabs_count))
 
         return [FormRequest.from_response(response, formname='refreshForm',
