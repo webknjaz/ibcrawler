@@ -44,13 +44,13 @@ class IBSpider(CrawlSpider):
         self.log('Items amount is {0}'.format(items_count))
         self.log('Tabs amount is {0}'.format(tabs_count))
 
-        return [FormRequest.from_response(response, formname='refreshForm',
+        for page in range(1, tabs_count + 1):
+            yield FormRequest.from_response(response, formname='refreshForm',
                                           formdata={
                                               'action': 'Advanced Search',
-                                              'start': str(p)
+                                              'start': str(page)
                                           },
                                           callback=self.parse_page)
-                for p in range(1, tabs_count + 1)]
 
     def parse_page(self, response):
         """Fetch table lines into items one by one"""
