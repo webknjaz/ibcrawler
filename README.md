@@ -26,5 +26,4 @@ To produce CSV add `-o results.csv -t csv` arguments to above command.
 
 Notes
 ===========================
-Written by Svyatoslav Sydorenko in scope of [oDesk job]
-(https://www.odesk.com/jobs/Teach-how-scrape-particular-page_~018c1c67167e293654)
+Written by Sviatoslav Sydorenko in scope of [oDesk job](https://www.odesk.com/jobs/Teach-how-scrape-particular-page_~018c1c67167e293654)
